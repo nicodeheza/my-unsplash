@@ -2,6 +2,8 @@ import "dotenv/config";
 import express from "express";
 import path from "path";
 
+import routes from "./routes/routes";
+
 const app = express();
 
 app.use(express.json());
@@ -13,6 +15,8 @@ if (process.env.NODE_ENV === "production") {
 		res.status(200).sendFile(path.join(__dirname, "public", "index.html"));
 	});
 }
+
+app.use("/api", routes);
 
 const port = process.env.PORT || 4000;
 
