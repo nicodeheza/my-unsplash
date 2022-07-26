@@ -1,6 +1,5 @@
 import {Prisma} from "@prisma/client";
 import {Request, Response} from "express";
-import prisma from "../db/prisma";
 import imageServices from "../services/imageService";
 
 export default async function addPhoto(req: Request, res: Response) {
