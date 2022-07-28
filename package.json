@@ -8,7 +8,7 @@
     "build": "tsc",
     "start": "set NODE_ENV=production&&node ./app/index.js",
     "test": "mocha --timeout 10000 -r ts-node/register './src/test/**/*.ts' ",
-    "password": "ts-node passwordScript.ts "
+    "password": "ts-node ./scripts/passwordScript.ts "
   },
   "keywords": [],
   "author": "",

@@ -1,5 +1,5 @@
 import Prompt from "prompt-sync";
-import hashPassword from "./src/util/hashPassword";
+import hashPassword from "../src/util/hashPassword";
 
 const prompt = Prompt({
 	sigint: true
