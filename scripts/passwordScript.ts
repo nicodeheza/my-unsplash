@@ -6,7 +6,7 @@ const prompt = Prompt({
 });
 
 export default async function createAdminPassword() {
-	let password;
+	let password: string;
 	password = prompt("Please enter a new password: ");
 
 	if (!password) {
