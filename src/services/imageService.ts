@@ -35,7 +35,8 @@ export class ImageServices {
 		if (label) {
 			query.where = {
 				label: {
-					contains: label
+					contains: label,
+					mode: "insensitive"
 				}
 			};
 		}

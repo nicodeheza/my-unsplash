@@ -87,7 +87,8 @@ describe("imageServices", function () {
 				take: 10,
 				where: {
 					label: {
-						contains: "test"
+						contains: "test",
+						mode: "insensitive"
 					}
 				},
 				orderBy: {

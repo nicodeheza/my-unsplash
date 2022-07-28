@@ -5,6 +5,7 @@ const prisma = new PrismaClient();
 interface dataT {
 	url: string;
 	label: string;
+	createdAt: Date;
 }
 
 function randomNum(min: number, max: number) {
@@ -22,7 +23,8 @@ function createFakeData(numOfRecord: number) {
 	for (let i = 0; i < numOfRecord; i++) {
 		const newRecord: dataT = {
 			url: faker.image.image(imageWidth, imageHeight, true),
-			label: faker.lorem.words()
+			label: faker.lorem.words(),
+			createdAt: new Date(faker.date.recent(30))
 		};
 		records.push(newRecord);
 	}
